@@ -1,37 +1,9 @@
 # Data-manipulation-for-maps-in-r
 
-# Compute mean of a categorical to join with map data later
+This is a repository were i put functions that i created that lets you handle data for maps uses
 
-#with-catname-we-describe-the-categorical-variable
-#with-varname-we-describe-the-discrete-variable-of-our-data-frame
-#this function takes the variable names in the form of characters 
-#for example you have a (df)dataframe and you want to compute the mean for the (x)discrete variable of a (cat)categorical variable
-#your input should look like this MeanCat(df,"x","cat")
-#after that the function handles the rest and gives you an output matrix with the cat and the discrete to left join afterwards
-#with the map data you have choosen
+# Mean Categorical 
 
-
-MeanCat <- function(df,varname,catname){
-  var <- which(colnames(df)== varname)
-  cat <- which(colnames(df)== catname)
-  numrowcol <- dim(df)
-  #use tapply to compute the mean of each catvar 
-  Mesos <- with (df, tapply(df[,var],df[,cat],mean))
-  rowcat <- dimnames(Mesos)
-  row.names(Mesos) <- 1:dim(Mesos)[1]
-  Mesos <- as.data.frame(Mesos)
-  Mesos <- cbind(rowcat,Mesos)
-  if(class(catname)=="character" & class(varname) == "character" ){
-    colnames(Mesos) <- c(catname,varname) 
-    
-  }else{
-    print("varname and catname should be characters")
-  }
-  return(Mesos)
-}
-
-#you can generalize this function if you add and extra variable in the function that changes what tapply computes in the 12 line of code 
-#in my function it justs computes the mean 
-#you sho
+This compute the mean of a categorical for a given discrete variable and gives a matrix as an output
 
 
