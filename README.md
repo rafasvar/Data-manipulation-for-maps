@@ -1,8 +1,14 @@
 # Data-manipulation-for-maps-in-r
 Compute mean of a categorical to join with map data later
 
-# with-catname-we-describe-the-categorical-variable
-# with-varname-we-describe-the-discrete-variable-of-our-data-frame
+#with-catname-we-describe-the-categorical-variable
+#with-varname-we-describe-the-discrete-variable-of-our-data-frame
+#this function takes the variable names in the form of characters 
+#for example you have a (df)dataframe and you want to compute the mean for the (x)discrete variable of a (cat)categorical variable
+#your input should look like this MeanCat(df,"x","cat")
+#after that the function handles the rest and gives you an output matrix with the cat and the discrete to left join afterwards
+#with the map data you have choosen
+
 
 MeanCat <- function(df,varname,catname){
   var <- which(colnames(df)== varname)
@@ -22,3 +28,9 @@ MeanCat <- function(df,varname,catname){
   }
   return(Mesos)
 }
+
+#you can generalize this function if you add and extra variable in the function that changes what tapply computes in the 12 line of code 
+#in my function it justs computes the mean 
+#you sho
+
+
