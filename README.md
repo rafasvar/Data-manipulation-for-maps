@@ -1,5 +1,6 @@
 # Data-manipulation-for-maps-in-r
-Compute mean of a categorical to join with map data later
+
+# Compute mean of a categorical to join with map data later
 
 #with-catname-we-describe-the-categorical-variable
 #with-varname-we-describe-the-discrete-variable-of-our-data-frame
