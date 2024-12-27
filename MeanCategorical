@@ -30,4 +30,4 @@ MeanCat <- function(df,varname,catname){
 
 #you can generalize this function if you add and extra variable in the function that changes what tapply computes in the 12 line of code 
 #in my function it justs computes the mean 
-#you sho
+
